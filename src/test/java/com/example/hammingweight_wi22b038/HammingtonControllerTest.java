@@ -32,5 +32,18 @@ class HammingtonControllerTest {
         assertEquals(expectedWeight, actualWeight);
     }
 
+    @Test
+    public void testReturnPrevious() {
+        //Assert
+        HammingtonController.lastMessage = "Test Message";
+        String expectedMessage = "Test Message";
+
+        //Act
+        String actualMessage = HammingtonController.returnPrevious();
+
+        //Assess
+        assertEquals(expectedMessage, actualMessage);
+    }
+
 
 }
